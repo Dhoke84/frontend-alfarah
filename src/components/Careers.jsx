@@ -9,27 +9,21 @@ import icon1 from "../assets/icons/icon1.png";
 
 const Careers = () => {
   const [jobs, setJobs] = useState([]);
-  const [error, setError] = useState(null);
 
-  // Fetch job data from API
+  // Fetch job data
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const response = await fetch("https://alfarah-full-stack.vercel.app/jobs");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        const response = await fetch("https://alfarah-full-stack.vercel.app/jobs"); // Replace with your API endpoint if necessary
         const data = await response.json();
         setJobs(data);
       } catch (error) {
-        console.error("Error fetching job data:", error.message);
-        setError("We encountered a problem loading job postings. Please try again later.");
+        console.error("Error fetching job data:", error);
       }
     };
-  
+
     fetchJobs();
   }, []);
-  
 
   return (
     <>
@@ -39,7 +33,7 @@ const Careers = () => {
           <div className="offerings-header">
             <h1>Our Careers</h1>
             <p>
-              We are glad that you are interested in joining our team! Available posts will be announced here.
+              We are glad that you are interested in joining our team! Available posts will be announced here,
             </p>
           </div>
         </div>
@@ -51,33 +45,27 @@ const Careers = () => {
       {/* Timeline and Form Section */}
       <section className="timeline-form-section">
         <div className="timeline">
-          {error ? (
-            <div className="error-message">{error}</div>
-          ) : jobs.length > 0 ? (
-            jobs.map((job) => (
-              <div className="timeline-point" key={job._id}>
-                <div className="timeline-icon">{job._id.slice(-3)}</div> {/* Unique identifier */}
-                <div className="timeline-content">
-                  <h3>{job.roleName}</h3>
-                  <p>{job.description}</p>
-                  <p><strong>Key Responsibilities:</strong></p>
-                  <ul className="styled-list">
-                    {job.keyResponsibilities.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                  <p><strong>Qualifications:</strong></p>
-                  <ul className="styled-list">
-                    {job.qualifications.map((item, index) => (
-                      <li key={index}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
+          {jobs.map((job) => (
+            <div className="timeline-point" key={job.id}>
+              <div className="timeline-icon">{job.id}</div>
+              <div className="timeline-content">
+                <h3>{job.title}</h3>
+                <p>{job.description}</p>
+                <p><strong>Key Responsibilities:</strong></p>
+                <ul className="styled-list">
+                  {job.responsibilities.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+                <p><strong>Qualifications:</strong></p>
+                <ul className="styled-list">
+                  {job.qualifications.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </div>
-            ))
-          ) : (
-            <div className="loading-message">Loading job postings...</div>
-          )}
+            </div>
+          ))}
         </div>
 
         {/* Form Section */}
@@ -91,7 +79,7 @@ const Careers = () => {
             id="application-form"
             action="mailto:hr@alfarahcenter.com"
             method="POST"
-            encType="multipart/form-data"
+            enctype="multipart/form-data"
           >
             <div className="form-group">
               <label htmlFor="name">Name:</label>
