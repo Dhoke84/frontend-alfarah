@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/style.css";
 import "../styles/services.css";
 import "../styles/about.css";
+import "../styles/demo.css";
 import "../styles/responsive.css";
 
 import icon10 from "../assets/img/10.png";
@@ -28,19 +29,19 @@ const Careers = () => {
   return (
     <>
       {/* Offerings Section */}
-      <section className="offerings-section" style={{ backgroundColor: "white" }}>
-        <div className="offerings-content">
-          <div className="offerings-header">
-            <h1>Our Careers</h1>
-            <p>
-              We are glad that you are interested in joining our team! Available posts will be announced here,
-            </p>
-          </div>
-        </div>
-        <div className="offerings-image">
-          <img src={icon10} alt="Offerings Image" />
-        </div>
-      </section>
+   
+
+       <section className="responsive-section" style={{ backgroundColor: "white" }}>
+                    <div className="text-content">
+                      <h2 className="responsive-header">Our Careers</h2>
+                      <p className="responsive-paragraph">
+                      We are glad that you are interested in joining our team! Available posts will be announced here,
+                      </p>
+                    </div>
+                    <div className="image-content">
+                      <img src={icon10} alt="Sample" className="responsive-image" />
+                    </div>
+                  </section>
 
       {/* Timeline and Form Section */}
       <section className="timeline-form-section">

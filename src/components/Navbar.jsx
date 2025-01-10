@@ -4,6 +4,8 @@ import "../styles/responsive.css";
 import logo from "../assets/images/new-logo.png";
 import { Link } from 'react-router-dom';
 import form from "../assets/img/APPLICATION_FORM.pdf"
+import { FaEnvelope, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'; // Importing the necessary icons
+
 
 const Navbar = () => {
   // State for handling mobile menu toggle
@@ -39,7 +41,24 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="top-bar">
+        <div className="top-bar-item">
+          <FaEnvelope className="top-bar-icon" />
+          <a href="mailto:info@alfarahcenter.com" className="top-bar-link">info@alfarahcenter.com</a>
+        </div>
+        <div className="top-bar-item">
+          <FaWhatsapp className="top-bar-icon" />
+          <a href="https://wa.me/971567019877" className="top-bar-link">+971 56 701 9877</a>
+        </div>
+        <div className="top-bar-item">
+          <FaPhoneAlt className="top-bar-icon" />
+          <a href="tel:+971026784002" className="top-bar-link">+971 02 678 4002</a>
+        </div>
+      </div>
+  
     <header className="header">
+
+      {/* add here top bar where add given  */}
       <div className="header-container">
         <div className="header-logo">
           <img src={logo} alt="LOGO IMAGE" />

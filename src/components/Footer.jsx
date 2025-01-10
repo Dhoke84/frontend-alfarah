@@ -6,6 +6,11 @@ import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   const [modalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  }); // State to handle form data
 
   // Open modal when the button is clicked
   const openModal = () => setModalOpen(true);
@@ -13,9 +18,36 @@ const Footer = () => {
   // Close modal when the close button is clicked
   const closeModal = () => setModalOpen(false);
 
+  // Handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Log the form data (replace this with backend logic if needed)
+    console.log('Form Submitted:', formData);
+
+    // Clear form data after submission
+    setFormData({
+      name: '',
+      email: '',
+      message: '',
+    });
+
+    // Close the modal
+    closeModal();
+  };
+
   // Function to open WhatsApp chat
   const openWhatsApp = () => {
-    window.open("https://wa.me/+123456789", "_blank"); // Update the link with your number
+    window.open("https://wa.me/971567019877", "_blank"); // Update the link with your number
   };
 
   return (
@@ -58,14 +90,14 @@ const Footer = () => {
             >
               Talk to Professional
             </button>
-            
+
             {/* Get In Touch button */}
             <Link to="/contact">
               <button id="contact-link" className="Get-In">
                 Get In Touch
               </button>
             </Link>
-            
+
             {/* Chat on WhatsApp button */}
             <button
               id="talkTo"
@@ -92,30 +124,37 @@ const Footer = () => {
           >
             &times;
           </span>
-          <h2>Leave Here Message</h2>
-          <form
-            id="contactForm"
-            action="https://api.web3forms.com/submit"
-            method="POST"
-          >
-            <input
-              type="hidden"
-              name="access_key"
-              value="31c3f84a-a9aa-41ee-9c8d-4406996a1bf7"
-            />
-            <input
-              type="hidden"
-              name="to_email"
-              value="info@alfarahcenter.com"
-            />
+          <h2>Leave Your Message</h2>
+          <form id="contactForm" onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              required
+            />
 
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              required
+            />
 
             <label htmlFor="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleInputChange}
+              required
+            ></textarea>
 
             <button type="submit" className="send-button">
               Send Message

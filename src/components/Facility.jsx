@@ -4,6 +4,7 @@ import "../styles/services.css";
 import "../styles/about.css";
 import "../styles/responsive.css";
 import "../styles/facility.css";
+import "../styles/demo.css";
 import icon4 from "../assets/icons/icon1.png"; // Import icon for mission
 import icon2 from "../assets/icons/icon2.png"; // Import icon for vision
 import icon3 from "../assets/icons/icon3.png"; 
@@ -17,19 +18,19 @@ const Facility = () => {
    <>
     <>
       {/* Offerings Section */}
-      <section className="offerings-section" style={{ backgroundColor: "white" }}>
-        <div className="offerings-content">
-          <div className="offerings-header">
-            <h1>Our Facilities</h1>
-            <p style={{ textAlign: "justify" }}>
-              We aim to reflect the quality of care children will receive through our facilities, creating a welcoming and joyful rehabilitation environment equipped with necessary resources. We place a high value on health and safety measures, as well as privacy and comfort for parents.
-            </p>
-          </div>
-        </div>
-        <div className="offerings-image offerings-image-facility">
-          <img src={image11} alt="Offerings Image" />
-        </div>
-      </section>
+   
+
+        <section className="responsive-section" style={{ backgroundColor: "white" }}>
+              <div className="text-content">
+                <h2 className="responsive-header">Our Facilities</h2>
+                <p className="responsive-paragraph">
+                We aim to reflect the quality of care children will receive through our facilities, creating a welcoming and joyful rehabilitation environment equipped with necessary resources. We place a high value on health and safety measures, as well as privacy and comfort for parents.
+                </p>
+              </div>
+              <div className="image-content">
+                <img src={image11} alt="Sample" className="responsive-image" />
+              </div>
+            </section>
 
       {/* Card Section */}
       <section>

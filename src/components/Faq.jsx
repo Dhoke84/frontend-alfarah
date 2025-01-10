@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../styles/style.css";
 import "../styles/services.css";
 import "../styles/about.css";
+import "../styles/demo.css";
 import "../styles/responsive.css";
 import image9 from "../assets/img/9.png"
 
@@ -55,22 +56,20 @@ const Faq = () => {
   
     return (
       <div>
-        {/* Offerings Section */}
-        <section className="offerings-section offerings-section-faq">
-          <div className="offerings-content offerings-content-faq">
-            <div className="offerings-header offerings-header-faq">
-              <h1>FAQs</h1>
-              <p>
-                Here are some frequently asked questions we often receive. We’ve compiled answers to common queries to
+      
+         <section className="responsive-section">
+                      <div className="text-content">
+                        <h2 className="responsive-header">FAQs</h2>
+                        <p className="responsive-paragraph">
+                        Here are some frequently asked questions we often receive. We’ve compiled answers to common queries to
                 help you find the information you need quickly. If you have any other questions, feel free to reach out
                 to us!
-              </p>
-            </div>
-          </div>
-          <div className="offerings-image offerings-image-faq">
-            <img src={image9} alt="Offerings" />
-          </div>
-        </section>
+                        </p>
+                      </div>
+                      <div className="image-content">
+                        <img src={image9} alt="Sample" className="responsive-image" style={{"width":"50%"}}/>
+                      </div>
+                    </section>
   
         {/* FAQ Section */}
         <section className="faq-section">

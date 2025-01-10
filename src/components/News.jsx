@@ -1,8 +1,10 @@
 import React from 'react'
 import "../styles/style.css";
+import "../styles/responsive.css";
 import "../styles/services.css";
 import "../styles/about.css";
-import "../styles/responsive.css";
+import "../styles/demo.css";
+
 
 import newsimg from "../assets/images/about-container.png"
 
@@ -11,22 +13,20 @@ import newsimg2 from "../assets/images/unnamed.jpg"
 const News = () => {
   return (
     <div>
-    {/* Offerings Section */}
-    <section className="offerings-section offerings-section-news">
-      <div className="offerings-content offerings-content-news">
-        <div className="offerings-header offerings-header-news">
-          <h1>All Events</h1>
-          <p>
-            Stay updated with the latest news and upcoming events.
-            <br />
+   
+
+     <section className="responsive-section" >
+                  <div className="text-content">
+                    <h2 className="responsive-header">All Events</h2>
+                    <p className="responsive-paragraph">
+                    Stay updated with the latest news and upcoming events.
             At Alfarah, we never stop learning and empowering children, the team, educators, families, and caregivers.
-          </p>
-        </div>
-      </div>
-      <div className="offerings-image">
-        <img src={newsimg} alt="Offerings" />
-      </div>
-    </section>
+                    </p>
+                  </div>
+                  <div className="image-content">
+                    <img src={newsimg} alt="Sample" className="responsive-image" />
+                  </div>
+                </section>
 
     {/* Event Card */}
     <div className="event-card">
