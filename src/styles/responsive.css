@@ -53,6 +53,7 @@
 
   .header {
     padding: 1rem 2rem;
+    margin-top: 2rem;
     z-index: 5000;
     position: fixed;
   }
@@ -110,7 +111,7 @@
   .main-nav {
   
     position: fixed; /* Fixed positioning to ensure it stays in the same place */
-    top: 6.5rem; /* Adjust top position */
+  top: 8rem;
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
      /* Or your preferred color */
@@ -985,6 +986,7 @@ width: 100%;
 
   .header {
     padding: 1rem 2rem;
+    margin-top: 3rem;
     z-index: 5000;
     position: fixed;
   }
@@ -1041,7 +1043,7 @@ width: 100%;
   .main-nav {
   
     position: fixed; /* Fixed positioning to ensure it stays in the same place */
-    top: 9rem; /* Adjust top position */
+    top: 12rem;
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
      /* Or your preferred color */

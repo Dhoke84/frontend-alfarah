@@ -41,20 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="top-bar">
-        <div className="top-bar-item">
-          <FaEnvelope className="top-bar-icon" />
-          <a href="mailto:info@alfarahcenter.com" className="top-bar-link">info@alfarahcenter.com</a>
-        </div>
-        <div className="top-bar-item">
-          <FaWhatsapp className="top-bar-icon" />
-          <a href="https://wa.me/971567019877" className="top-bar-link">+971 56 701 9877</a>
-        </div>
-        <div className="top-bar-item">
-          <FaPhoneAlt className="top-bar-icon" />
-          <a href="tel:+971026784002" className="top-bar-link">+971 02 678 4002</a>
-        </div>
-      </div>
+     
   
     <header className="header">
 
@@ -62,8 +49,39 @@ const Navbar = () => {
       <div className="header-container">
         <div className="header-logo">
           <img src={logo} alt="LOGO IMAGE" />
-        </div>
 
+          <div className="contact-info2">
+      {/* WhatsApp Contact */}
+      <div className="contact-item2">
+        <FaWhatsapp className="icon2" style={{ color: 'green' }} />
+        <a
+          href="https://wa.me/971567019877" // Corrected the link
+          target="_blank"
+          rel="noopener noreferrer"
+          className="contact-link-2" >
+        
+          056 701 9877
+        </a>
+      </div>
+
+      {/* Email Contact */}
+      <div className="contact-item2">
+        <FaEnvelope className="icon2" />
+        <a href="mailto:info@alfarahcenter.com" className="contact-link-2" >
+          info@alfarahcenter.com
+        </a>
+      </div>
+
+      {/* Phone Contact */}
+      <div className="contact-item2">
+        <FaPhoneAlt className="icon2" style={{ color: 'green' }} />
+        <a href="tel:+971026784002" className="contact-link-2">
+          02 678 4002
+        </a>
+      </div>
+    </div>
+        </div>
+      
         {/* Menu icon for mobile view */}
         <div
           className={`fas fa-bars ${isMenuOpen ? 'hidden' : ''}`}
@@ -77,6 +95,7 @@ const Navbar = () => {
           id="close-icon"
           onClick={toggleMenu}
         ></div>
+      
 
         <div className="header-link">
           <Link to="/faq" id="faq-link">FAQs</Link>
