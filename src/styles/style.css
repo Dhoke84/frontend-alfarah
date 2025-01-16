@@ -58,7 +58,7 @@ body {
   justify-content: space-between;
   width: 100%;
   
-  padding: 2rem 8rem;
+
   background-color: white;
   position: fixed;
 top : 0%;
@@ -70,19 +70,22 @@ top : 0%;
 
 .header .header-logo {
   display: flex;
+    
   align-items: center;
   justify-content: space-between;
 }
 
 .header .header-container {
+  background-color: var(--color);
   display: flex;
   align-items: center;
+  padding: 2rem 8rem;
   justify-content: space-between;
 }
 
 .header .header-container .header-logo img {
   width: 20vw;
-  margin-right:2rem;
+  margin-right: 30px;
 }
 
 .header .logo {
@@ -108,7 +111,7 @@ top : 0%;
 .header .header-container .header-link a {
   position: relative;
   text-decoration: none;
-  color: var(--color);
+  color: white;
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
@@ -146,7 +149,8 @@ top : 0%;
 .search-bar input {
   width: 0;
   padding: 10px 40px 10px 20px;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--color);
+  background-color: var(--color);
   border-radius: 4px;
   font-size: 16px;
   outline: none;
@@ -164,7 +168,7 @@ top : 0%;
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  color: #003C71;
+  color: white;
   cursor: pointer;
 }
 
@@ -188,6 +192,10 @@ top : 0%;
   color: #aaa;
 }
 
+.main-nav {
+  padding: 0rem 8rem 2rem 8rem; 
+  background-color: white;
+}
 /* Main Navigation Styles */
 .main-nav ul {
   list-style: none;
@@ -2033,7 +2041,7 @@ gap: 1rem;
   
   .contact-info-2 h2 {
     font-size: 4rem;
-    color: var(--color); /* Primary color */
+    color:  white;
     margin-left: 1rem;
     text-align: right;
     position: relative; /* For positioning the pseudo-element */
@@ -2053,18 +2061,19 @@ gap: 1rem;
   .contact-item2 {
     display: flex;
     align-items: flex-start; /* Ensures text and icon align at the start */
-    gap: 10px;
+    gap: 20px;
   }
   
   .contact-link-2 {
     font-size: 1.5rem;
     margin-top: 5px;
-    color: var(--color);
+    color: white;
     font-weight:600;
   }
-  .icon2 {
-    font-size: 30px;
-    color: var(--color);
+  .icon4 {
+    font-size: 27px;
+    color: white;
+    background-color: transparent
   }
   
   .contact-item2 span {
@@ -2076,8 +2085,8 @@ gap: 1rem;
   @media screen and (max-width: 768px) {
     .contact-info2 {
       position: fixed;
-      top: 0%;
-      left: 0%;
+      top: 9rem;
+      left: 2rem;
       flex-direction: row; /* Switch to column layout for smaller screens */
       align-items: flex-start; /* Maintain alignment at the start */
       padding: 1.5rem;
@@ -2098,10 +2107,11 @@ gap: 1rem;
       font-weight:600;
     }
   
-    .icon2 {
+    .icon4 {
       font-size: 20px;
       margin-top: 0px;
       background-color: none;
+      color: white;
     }
   }
   
@@ -2124,9 +2134,10 @@ gap: 1rem;
   
     }
   
-    .icon2 {
+    .icon4 {
       font-size: 10px;
       background-color: none;
+      color: white;
       margin-top: 0;
     }
   }

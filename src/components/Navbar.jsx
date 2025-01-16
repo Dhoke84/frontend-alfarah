@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/style.css";
 import "../styles/responsive.css";
-import logo from "../assets/images/new-logo.png";
+import logo from "../assets/images/white-logo.png" ;
 import { Link } from 'react-router-dom';
 import form from "../assets/img/APPLICATION_FORM.pdf"
 import { FaEnvelope, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'; // Importing the necessary icons
@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="contact-info2">
       {/* WhatsApp Contact */}
       <div className="contact-item2">
-        <FaWhatsapp className="icon2" style={{ color: 'green' }} />
+        <FaWhatsapp className="icon4" style={{ color: '#95C92C' }} />
         <a
           href="https://wa.me/971567019877" // Corrected the link
           target="_blank"
@@ -66,7 +66,7 @@ const Navbar = () => {
 
       {/* Email Contact */}
       <div className="contact-item2">
-        <FaEnvelope className="icon2" />
+        <FaEnvelope className="icon4" />
         <a href="mailto:info@alfarahcenter.com" className="contact-link-2" >
           info@alfarahcenter.com
         </a>
@@ -74,7 +74,7 @@ const Navbar = () => {
 
       {/* Phone Contact */}
       <div className="contact-item2">
-        <FaPhoneAlt className="icon2" style={{ color: 'green' }} />
+        <FaPhoneAlt className="icon4" style={{ color: '#95C92C' }} />
         <a href="tel:+971026784002" className="contact-link-2">
           02 678 4002
         </a>
