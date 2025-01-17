@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/style.css";
 import "../styles/responsive.css";
-import logo from "../assets/images/white-logo.png" ;
+import logo from "../assets/images/alfarah_website_logo.png" ;
 import { Link } from 'react-router-dom';
 import form from "../assets/img/APPLICATION_FORM.pdf"
 import { FaEnvelope, FaWhatsapp, FaPhoneAlt } from 'react-icons/fa'; // Importing the necessary icons
@@ -60,13 +60,14 @@ const Navbar = () => {
           rel="noopener noreferrer"
           className="contact-link-2" >
         
-          056 701 9877
+        +971567019877
         </a>
       </div>
 
       {/* Email Contact */}
       <div className="contact-item2">
-        <FaEnvelope className="icon4" />
+        <FaEnvelope className="icon4"style={{ color: '#003C71', backgroundColor: 'white', padding: '5px' , borderRadius: "20px" }}
+ />
         <a href="mailto:info@alfarahcenter.com" className="contact-link-2" >
           info@alfarahcenter.com
         </a>
