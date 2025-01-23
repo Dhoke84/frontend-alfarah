@@ -1,0 +1,313 @@
+:root {
+    --color: #003C71;
+    --coralpink: #FF688B;
+    --skyblue: #00BFFF;
+    --amber: #FFC700;
+    --green: #95C92C;
+    --white: #F2F4EF;
+  }
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    
+    transition: all 0.2s linear;
+    text-decoration: none;
+  }
+  
+/* General Section Styling */
+.responsive-section {
+    display: flex;
+    align-items: center;
+    margin-top: 13rem;
+    justify-content: space-between;
+    padding: 2rem 10rem;
+    gap: 2rem;
+    margin-bottom: -5rem;
+  }
+  .responsive-section-top {
+    margin-top: 15rem;
+    margin-bottom: 2rem;;
+  }
+  
+  /* Text Content Styling */
+  .text-content {
+    flex: 1;
+  }
+  
+  .responsive-header {
+    font-size: 4rem;
+    color: var(--color); /* Blue color */
+    position: relative;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .responsive-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.5rem;
+    width: 100%; /* Adjust width of the underline */
+    height: 0.4rem;
+    background: #ff688b; /* Pink color */
+    border-radius: 3px;
+  }
+  
+  .responsive-paragraph {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    text-align: justify;
+    color: #6d6b6b; /* Darker text color */
+  }
+  
+  /* Image Content Styling */
+  .image-content {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional for rounded corners */
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1024px) {
+    .responsive-section {
+      flex-direction: column; /* Stack items vertically on tablets */
+      text-align: center;
+    
+    }
+    .responsive-section-top {
+      margin-top: 15rem;
+      margin-bottom: 5rem;;
+    }
+  
+    .text-content {
+      margin-bottom: 1.5rem;
+    }
+  
+    .responsive-header {
+      font-size: 2rem; /* Slightly smaller header for tablets */
+    }
+  
+    .responsive-paragraph {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .responsive-section {
+      margin-top: 14rem;
+        padding: 2rem 7rem;
+       
+      }
+    .responsive-header {
+      font-size:3.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .responsive-paragraph {
+      font-size: 1.8rem;
+    }
+  
+    .responsive-image {
+      margin-top: -2rem;
+      max-width: 100%; /* Reduce image size for mobile */
+    }
+  }
+  
+ /* General Styling */
+.services-page {
+    padding: 2rem 10rem;
+  }
+  
+  .services-header h1 {
+    font-size: 2.5rem;
+    color: var(--color); /* Blue color for the header */
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .services-header p {
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  /* Service List */
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Alternate Layout Styling */
+  .service-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .left-aligned {
+    flex-direction: row; /* Image on the left, text on the right */
+  }
+  
+  .right-aligned {
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+  }
+  
+  .service-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-height: 300px; /* Limit height for consistency */
+  }
+  
+  .service-text {
+    flex: 1;
+    text-align: justify;
+  }
+  
+  .service-text h2 {
+    font-size: 3rem;
+    color: #003c71; /* Blue header for therapy titles */
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .service-text h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 4px;
+    text-align: justify;
+    background-color: var(--amber); /* Pink underline */
+    border-radius: 5px;
+  }
+  
+  .service-text p {
+    margin-bottom: 1rem;
+    color: #444;
+    text-align: justify;
+    font-size: 1.6rem;
+  }
+  
+  /* Subsections */
+
+  
+  .subsection {
+    border-left: 5px solid #ff688b; /* Vertical pink border */
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  .subsection h4 {
+    font-size: 1.8rem;
+    color: #003c71;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #ff688b; /* Pink underline for subsection headers */
+    display: inline-block;
+  }
+  
+  .subsection p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 1.4rem;
+    text-align: justify;
+  }
+  
+  /* Bullet Points */
+  .bullet-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .bullet-points li {
+    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .bullet-points li::before {
+    content: "●"; /* Pink dot */
+    position: absolute;
+    left: 0;
+    font-size: 1rem;
+    color: #ff688b; /* Pink color */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .service-item {
+      flex-direction: column; /* Stack items vertically */
+    }
+  
+    .left-aligned,
+    .right-aligned {
+      flex-direction: column-reverse;
+    }
+  
+    .service-text {
+      text-align: center;
+    }
+  
+    .service-image img {
+      max-height: 250px;
+    }
+
+    
+  }
+  
+  @media (max-width: 768px) {
+    .service-image img {
+        max-height: 250px;
+      }
+    
+    .services-header h1 {
+      font-size: 3rem;
+    }
+  
+    .services-header p {
+      font-size: 0.9rem;
+    }
+  
+ 
+  
+    .subsection h4 {
+      font-size: 2rem;
+    }
+
+    .subsection p {
+      font-size: 1.8rem;
+    }
+  
+    .bullet-points li {
+      font-size: 1.5rem;
+    }
+
+    .service-image {
+     margin-top: 0;
+     margin-bottom: 0;
+     width: 100%;
+    }
+
+  }
+  

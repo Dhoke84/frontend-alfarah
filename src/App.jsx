@@ -1,20 +1,27 @@
 import './App.css';
-import About from './components/About.jsx';
-import Footer from './components/Footer.jsx';
-import Home from './components/Home.jsx';
-import Navbar from './components/Navbar.jsx';
+import About from '../src/english/pages/About.jsx';
+import Footer from '../src/english/components/Footer.jsx';
+import Home from '../src/english/pages/Home.jsx';
+import Navbar from './english/components/Navbar.jsx';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Service from './components/Service.jsx';
-import Facility from './components/Facility.jsx';
-import Careers from './components/Careers.jsx';
-import News from './components/News.jsx';
-import Faq from './components/Faq.jsx';
+import Service from '../src/english/pages/Service.jsx';
+import Facility from '../src/english/pages/Facility.jsx';
+import Careers from '../src/english/pages/Careers.jsx';
+import News from '../src/english/pages/News.jsx';
+import Faq from '../src/english/pages/Faq.jsx';
+import HomeAr from './arabic/pages/HomeAr.jsx';
+import ServicesAr from './arabic/pages/ServiceAr.jsx';
+import FacilityAr from './arabic/pages/FacilityAr.jsx';
+import CareersAr from './arabic/pages/CareersAr.jsx';
+import NewsAr from './arabic/pages/NewsAr.jsx';
+import FaqAr from './arabic/pages/FaqAr.jsx';
+import AboutAr from './arabic/pages/AboutAr.jsx';
 
 function App() {
   return (
     <Router>
       {/* Navbar is always visible */}
-      <Navbar />
+    
 
       {/* Routes */}
       <Routes>
@@ -25,11 +32,22 @@ function App() {
         <Route path="/careers" element={<Careers/>} />
         <Route path="/news&events" element={<News/>} />
         <Route path="/faq" element={<Faq/>} />
+
+
+        {/* Arabic */}
+
+        <Route path="/arabic" element={<HomeAr />} />
+        <Route path="/arabic-about" element={<AboutAr/>} />
+        <Route path="/arabic-services" element={<ServicesAr />} />
+        <Route path="/arabic-facility" element={<FacilityAr />} />
+        <Route path="/arabic-careers" element={<CareersAr/>} />
+        <Route path="/arabic-news&events" element={<NewsAr/>} />
+        <Route path="/arabic-faq" element={<FaqAr/>} />
         {/* You can add more routes here in the future */}
       </Routes>
 
       {/* Footer is always visible */}
-      <Footer />
+    
     </Router>
   );
 }
